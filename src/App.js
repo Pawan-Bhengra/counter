@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Counter from "./componenet/Counter";
+import StopWatch from "./componenet/StopWatch";
+import Newcall from "./componenet/Newcall";
+import NewCounter from "./componenet/NewCounter";
+import News from "./componenet/News";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Main from "./contextAPI/Main";
+
+import NavBar from "./contexts/NavBar";
+import BookList from "./contexts/BookList";
+import ThememContextProvider from "./contexts/ThemContext";
+import ToggleTheme from "./contexts/ToggleTheme";
+
+class App extends Component {
+
+  
+  render() {
+    return (
+      <div className="App">
+        {/* <Counter/> */}
+        {/* <StopWatch /> */}
+        {/* <Newcall/> */}
+        {/* <NewCounter /> */}
+        {/* <News/> */}
+        {/* <Main/> */}
+
+        <ThememContextProvider>
+          <NavBar />
+          <BookList />
+          <ToggleTheme/>
+        </ThememContextProvider>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -13,15 +14,54 @@
   }
 }
 
+.display-style {
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.button-style {
+  color: white;
+  background-color: red;
+  font-size: 1rem;
+  padding: .7rem;
+  margin: 2rem .4rem;
+  width:9vw
+  
+}
+
+.container{
+  margin: 2rem;
+}
+
 .App-header {
+  
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.in-counter {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-column: 1fr 1fr;
+}
+
+
+.input {
+  font-size: 1.5rem;
+  align-items: left;
+}
+
+.input::placeholder {
+  font-size: 1rem;
+  align-items: center;
 }
 
 .App-link {
@@ -36,3 +76,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* // userDecrement=()=>{
+  //   this.setState
+  // }
+
+  // onSubmit = (e) => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     userIncr: this.state.userIncr,
+  //     userDecr: this.state.userDecr,
+  //   });
+  // }; */
