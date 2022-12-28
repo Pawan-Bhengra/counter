@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 
+// counter with functional component
 function NewCounter() {
   // useState pass value show current state value and setcount function sets the value of the state
   // setCount will update the count state
@@ -17,9 +18,9 @@ function NewCounter() {
     setThird(third + 2);
   };
 
-  const handleCountSubmit=(e)=>{
-    e.preventDefault()
-  }
+  const handleCountSubmit = (e) => {
+    e.preventDefault();
+  };
 
   // no need to write this in hooks
   return (
